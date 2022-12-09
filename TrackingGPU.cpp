@@ -1,0 +1,151 @@
+/*
+    
+    Objective: Find an object in the current frame given that we have tracked
+    the object successfully in all or nearly all previous frames.
+
+*/   
+
+
+#include <opencv2/opencv.hpp>
+#include <opencv2/tracking.hpp>
+#include <opencv2/core/ocl.hpp> 
+#include <chrono>
+#include <opencv2/core/cuda.hpp>
+#include <opencv2/core/cuda.inl.hpp>
+
+
+ 
+//Using namespace to avoid naming conflicts within this tracking code
+using namespace cv;
+using namespace std;
+using namespace std::chrono;
+
+// Convert to string
+
+#define SSTR( x ) static_cast< std::ostringstream & >( \
+(std::ostringstream() << std::dec << x ) ).str()
+
+
+
+int main(int argc, char **argv)
+{
+    // List of tracker types in OpenCV 4.2.0
+    string trackerTypes[8] = {"BOOSTING", "MIL", "KCF", "TLD","MEDIANFLOW", "GOTURN", "MOSSE", "CSRT"};
+    
+    // vector <string> trackerTypes(types, std::end(types));
+
+    // Create a tracker
+    string trackerType = trackerTypes[3];
+
+    Ptr<Tracker> tracker;
+
+    
+        if (trackerType == "BOOSTING")
+            tracker = TrackerBoosting::create();
+        if (trackerType == "MIL")
+            tracker = TrackerMIL::create();
+        if (trackerType == "KCF")
+            tracker = TrackerKCF::create();    
+        if (trackerType == "TLD")
+            tracker = TrackerTLD::create();
+        if (trackerType == "MEDIANFLOW")
+            tracker = TrackerMedianFlow::create();
+        if (trackerType == "GOTURN")
+            tracker = TrackerGOTURN::create();
+        if (trackerType == "MOSSE")
+            tracker = TrackerMOSSE::create();
+        if (trackerType == "CSRT")
+            tracker = TrackerCSRT::create();
+
+    // Read video
+    //VideoCapture video("wing.mp4"); 
+    VideoCapture(0);
+    
+    // Exit if video is not opened
+    if(!VideoCapture(0).isOpened())
+    {
+        cout << "Could not read video file" << endl; 
+        return 1; 
+    } 
+
+    // Read first frame 
+    Mat frame;
+    bool ok = VideoCapture(0).read(frame); 
+
+    // Define initial bounding box 
+    Rect2d bbox(287, 23, 86, 320); 
+    //circle bbox(frame, Point2i(4,2), 2, Scalar(255,0,0), 1, 8, 0);
+
+    // Uncomment the line below to select a different bounding box - Allows us to select a region of interest
+     bbox = selectROI(frame, false); 
+
+    // Display bounding box
+
+    rectangle(frame, bbox, Scalar( 255, 0, 0 ), 2, 1 ); 
+    //circle(frame, Point2i(4,2), 2, Scalar(255,0,0), 1, 8, 0);
+
+    imshow("Tracking", frame); 
+    tracker->init(frame, bbox);
+
+    // Timer starts here, before loop where the frames are being updated
+    auto start = high_resolution_clock::now();
+    
+    while(VideoCapture(0).read(frame))
+    {     
+
+        // Start timer
+        double timer = (double)getTickCount();
+        
+        // Update the tracking result
+        bool ok = tracker->update(frame, bbox);
+        
+        // Calculate Frames per second (FPS)
+        float fps = getTickFrequency() / ((double)getTickCount() - timer);
+        
+        if (ok)
+        {
+            // Tracking success : Draw the tracked object. Here, we continue to update the bounding box within the while loop. 
+            //circle(frame, Point2i(4,2), 2, Scalar(255,0,0), 1, 8, 0);
+            rectangle(frame, bbox, Scalar( 255, 0, 0 ), 2, 1 );
+        }
+        else
+        {
+            // Tracking failure detected.
+            putText(frame, "Tracking failure detected", Point(100,80), FONT_HERSHEY_SIMPLEX, 0.75, Scalar(0,0,255),2);
+        }
+        
+        // After function call
+        auto stop = high_resolution_clock::now();
+
+        //Duration found by the difference between start and stop time of function call
+        auto duration = duration_cast<seconds>(stop - start);
+ 
+        // To get the value of duration using the count()
+        // member function on the duration object
+    
+        //cout << duration.count() << endl;
+
+        cout << "Time taken by tracking algorithm: "
+         << duration.count() << " seconds" << endl;
+        
+        // Display tracker type on frame
+        putText(frame, trackerType + " Tracker", Point(100,20), FONT_HERSHEY_SIMPLEX, 0.75, Scalar(50,170,50),2);
+        
+        // Display FPS on frame
+        putText(frame, "FPS : " + SSTR(int(fps)), Point(100,50), FONT_HERSHEY_SIMPLEX, 0.75, Scalar(50,170,50), 2);
+
+        // Display frame.
+        imshow("Tracking", frame);
+        
+        // Exit if ESC pressed.
+        int k = waitKey(1);
+        if(k == 27)
+        {  
+            break;
+        }
+
+    }
+
+}
+
+
