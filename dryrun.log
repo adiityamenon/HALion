@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/u_khan/RP'
+g++ Tracking.cpp -o Tracking `pkg-config opencv4 --cflags --libs`   `pkg-config opencv4 --cflags --libs`
+make: Leaving directory '/home/u_khan/RP'
+ 

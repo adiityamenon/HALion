@@ -1,0 +1,351 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Mon Sep 19 17:55:54 2022
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = ubuntu
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+IM_CONFIG_PHASE = 1
+# environment
+OGRE_RESOURCE_PATH = /usr/lib/x86_64-linux-gnu/OGRE-1.9.0
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /home/u_khan/RP
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/share/code/code
+# makefile (from 'Makefile', line 2)
+CFLAGS = `pkg-config opencv4 --cflags --libs`
+# environment
+JOURNAL_STREAM = 8:39056
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# environment
+GAZEBO_PLUGIN_PATH = /usr/lib/x86_64-linux-gnu/gazebo-11/plugins::/home/u_khan/uav_ws/build/ardupilot_gazebo:/path/to/catkin_ws/build/ardupilot_gazebo
+# environment
+USERNAME = u_khan
+# environment
+MAKELEVEL := 0
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# environment
+ROS_ETC_DIR = /opt/ros/noetic/etc/ros
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+ROS_PACKAGE_PATH = /home/u_khan/uav_ws/src/ar_track_alvar/ar_track_alvar_msgs:/home/u_khan/uav_ws/src/ar_track_alvar/ar_track_alvar:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/catkin_simple:/home/u_khan/uav_ws/src/navigation/fake_localization:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/glog_catkin:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/ros_gremsy/gremsy_base:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/ros_gremsy/gremsy_bringup:/home/u_khan/uav_ws/src/icuas22_competition:/home/u_khan/uav_ws/src/larics_gazebo_worlds:/home/u_khan/uav_ws/src/navigation/map_server:/home/u_khan/uav_ws/src/navigation/amcl:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/mav_comm/mav_comm:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/mav_comm/mav_msgs:/home/u_khan/uav_ws/src/navigation/navigation:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/ouster_os0_driver/ouster_client:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/ouster_os0_driver/ouster_viz:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/ouster_os0_driver/ouster_ros:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/mav_comm/planning_msgs:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/pozyx_ros:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/rotors_simulator/rotors_comm:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/rotors_simulator/rotors_control:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/rotors_simulator/rotors_description:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/rotors_simulator/rotors_evaluation:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/rotors_simulator/rotors_gazebo_plugins:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/ardupilot_gazebo:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/rotors_simulator/rotors_gazebo:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/rotors_simulator/rotors_joy_interface:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/rotors_simulator/rotors_simulator:/home/u_khan/uav_ws/src/storm_gazebo_ros_magnet:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/topp_ros:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_msgs:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_lib:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_control:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_general:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_tests:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_tracker:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/velodyne/velodyne:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/velodyne/velodyne_laserscan:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/velodyne/velodyne_msgs:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/velodyne/velodyne_driver:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/velodyne/velodyne_pcl:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/velodyne/velodyne_pointcloud:/home/u_khan/uav_ws/src/navigation/voxel_grid:/home/u_khan/uav_ws/src/navigation/costmap_2d:/home/u_khan/uav_ws/src/navigation/nav_core:/home/u_khan/uav_ws/src/navigation/base_local_planner:/home/u_khan/uav_ws/src/navigation/carrot_planner:/home/u_khan/uav_ws/src/navigation/clear_costmap_recovery:/home/u_khan/uav_ws/src/navigation/dwa_local_planner:/home/u_khan/uav_ws/src/navigation/move_slow_and_clear:/home/u_khan/uav_ws/src/navigation/navfn:/home/u_khan/uav_ws/src/navigation/global_planner:/home/u_khan/uav_ws/src/navigation/rotate_recovery:/home/u_khan/uav_ws/src/navigation/move_base:/home/u_khan/uav_ws/src/solution_ionlab:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/vrpn_catkin:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/ros_vrpn_client:/home/u_khan/uav_ws/src/uav_ros_simulation/ros_packages/uav_ros_stack/ros_packages/uav_ros_drivers/ros_packages/zed_cpu_ros:/opt/ros/noetic/share
+# environment
+MANAGERPID = 1610
+# environment
+ROS_PYTHON_VERSION = 3
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+LC_NAME = fr_FR.UTF-8
+# environment
+VSCODE_CWD = /home/u_khan
+# environment
+GAZEBO_MODEL_DATABASE_URI = http://models.gazebosim.org
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/u_khan/catkin_ws/uav_ros_simulation/.gitman/ardupilot/Tools/autotest:/usr/lib/ccache:/home/u_khan/uav_ros_simulation/.gitman/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-6-2017-q2-update/bin:/home/u_khan/.local/bin:/opt/ros/noetic/bin:/home/u_khan/.local/bin:/usr/lib/ccache:/home/u_khan/catkin_ws/uav_ros_simulation/.gitman/ardupilot/Tools/autotest:/usr/lib/ccache:/home/u_khan/uav_ros_simulation/.gitman/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-6-2017-q2-update/bin:/home/u_khan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/u_khan/uav_ros_simulation/firmware/ardupilot/Tools/autotest
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# environment
+SESSION_MANAGER = local/umerVirtualBox:@/tmp/.ICE-unix/1849,unix/umerVirtualBox:/tmp/.ICE-unix/1849
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+ROS_ROOT = /opt/ros/noetic/share/ros
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+INVOCATION_ID = 6ce09702077e498fb839296b2a550af2
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+CMAKE_PREFIX_PATH = /home/u_khan/uav_ws/devel:/opt/ros/noetic
+# environment
+LS_COLORS = 
+# environment
+ROS_DISTRO = noetic
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3053
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /home/u_khan/RP
+# default
+.LOADED := 
+# environment
+GAZEBO_MASTER_URI = http://localhost:11345
+# environment
+SSH_AGENT_PID = 1794
+# environment
+PKG_CONFIG_PATH = /home/u_khan/uav_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/u_khan
+# environment
+LD_LIBRARY_PATH = /home/u_khan/uav_ws/devel/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+VSCODE_CODE_CACHE_PATH = /home/u_khan/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+# environment
+LOGNAME = u_khan
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# automatic
++F = $(notdir $+)
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+LC_TIME = fr_FR.UTF-8
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+GAZEBO_RESOURCE_PATH = /usr/share/gazebo-11:
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# environment
+SHLVL = 0
+# makefile (from 'Makefile', line 1)
+CC = g++
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-559573dd-6d24-4a55-90cc-0621efbc414e.sock
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = u_khan
+# environment
+LC_MONETARY = fr_FR.UTF-8
+# makefile
+.DEFAULT_GOAL := Tracking
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# environment
+ROSLISP_PACKAGE_DIRECTORIES = /home/u_khan/uav_ws/devel/share/common-lisp
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LC_TELEPHONE = fr_FR.UTF-8
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-0341c4e6-1.67.2-main.sock
+# environment
+PYTHONPATH = /home/u_khan/uav_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+ROS_VERSION = 1
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# environment
+LC_PAPER = fr_FR.UTF-8
+# environment
+QT_ACCESSIBILITY = 1
+# default
+MAKEFILES := 
+# environment
+LC_NUMERIC = fr_FR.UTF-8
+# automatic
+<F = $(notdir $<)
+# environment
+LC_MEASUREMENT = fr_FR.UTF-8
+# environment
+ROS_MASTER_URI = http://localhost:11311
+# environment
+LC_ALL = C
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# makefile (from 'Makefile', line 3)
+LIBS = `pkg-config opencv4 --cflags --libs`  
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+GAZEBO_MODEL_PATH = /usr/share/gazebo-11/models:
+# environment
+WINDOWPATH = 2
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+LC_IDENTIFICATION = fr_FR.UTF-8
+# default
+.RECIPEPREFIX := 
+# environment
+LC_ADDRESS = fr_FR.UTF-8
+# environment
+LANG = C
+# environment
+VSCODE_PID = 3053
+# variable set hash-table stats:
+# Load=127/1024=12%, Rehash=0, Collisions=19/152=12%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2053, inode 4989089): 23 files, no impossibilities.
+
+# 23 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+all:
+#  Command line target.
+ 
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+Tracking.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-14 23:06:28.06120541
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+GPU: TrackingGPU.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 9):
+	$(CC) TrackingGPU.cpp -o GPU $(LIBS) $(CFLAGS)
+
+Tracking: Tracking.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 6):
+	$(CC) Tracking.cpp -o Tracking $(LIBS) $(CFLAGS)
+
+# Not a target:
+TrackingGPU.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=8/1024=1%, Rehash=0, Collisions=0/20=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 28 / storage = 362 B / avg = 12 B
+# current buf: size = 8162 B / used = 362 B / count = 28 / avg = 12 B
+
+# strcache performance: lookups = 38 / hit rate = 26%
+# hash-table stats:
+# Load=28/8192=0%, Rehash=0, Collisions=1/38=3%
+# Finished Make data base on Mon Sep 19 17:55:55 2022
+
+ 
